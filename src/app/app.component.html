@@ -1,0 +1,11 @@
+<div>
+  <label for="netPaycheck"> Net Paycheck Amount:
+    <input currencyMask [formControl]="netPaycheckAmount" id="netPaycheck"/>
+  </label>
+</div>
+<button (click)="calculate()"> Calculate </button>
+<app-calculator [netPaycheck]="netAmount" [paycheckCycles]="26"></app-calculator>
+ 
+<app-modal id="add-expense-modal">
+    <app-add-expense (done)="closeModal('add-expense-modal')"></app-add-expense>
+</app-modal>

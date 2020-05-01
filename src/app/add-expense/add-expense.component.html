@@ -1,0 +1,13 @@
+<h1>Add Expense</h1>
+<form [formGroup]="expenseForm" (ngSubmit)="onSubmit()">
+    <label> 
+      Name 
+      <input type="text" formControlName="name">
+    </label>
+    <label> 
+       Amount 
+      <input currencyMask formControlName="amount">
+    </label>
+    <button type="submit" [disabled]="!expenseForm.valid">Add</button>
+    <button type="button" (click)="cancel()">Cancel</button>
+</form>
